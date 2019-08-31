@@ -12,16 +12,26 @@ class ProjectsController extends Controller
 
     public function index() 
     {
-		$projects = Project::all();
+		$projects = auth()->user()->projects; //Project::all();
 
 		return view('projects.index', compact('projects'));
+    }
+
+
+    public function show(Project $project) 
+    {
+        
+        if (auth()->id() !== $project->owner->id) {
+            abort(403);
+        }
+
+        return view('projects.show', compact('project'));
     }
 
 
     public function store() 
     {
 
-        //dd('here we are');
 
     	$attributes = request()->validate([
             'title' => 'required', 
@@ -30,17 +40,20 @@ class ProjectsController extends Controller
 
         $attributes['owner_id'] = auth()->id();
 
-		Project::create($attributes);
+        auth()->user()->projects()->create($attributes);
 
 		return redirect('/projects');
     }
 
 
-    public function show(Project $project) 
+    public function create() 
     {
 
-    	return view('projects.show', compact('project'));
+        return view('projects.create');
     }
+
+
+
 
 
 }
