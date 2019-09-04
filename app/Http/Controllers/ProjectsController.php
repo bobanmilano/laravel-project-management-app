@@ -28,6 +28,13 @@ class ProjectsController extends Controller
     }
 
 
+    public function edit(Project $project) 
+    {
+        return view('projects.edit', compact('project'));
+
+    }
+
+
 
     public function store() 
     {
@@ -37,6 +44,8 @@ class ProjectsController extends Controller
             'description' => 'required|max:100',
             'notes'     => 'min:3'
         ]);
+
+        //dd($attributes);
 
         $attributes['owner_id'] = auth()->id();
         $project = auth()->user()->projects()->create($attributes);
@@ -58,10 +67,14 @@ class ProjectsController extends Controller
 
         $this->authorize('update', $project);
 
+        $attributes = request()->validate([
+            'title' => 'required', 
+            'description' => 'required|max:100',
+            'notes'     => 'min:3'
+            ]);
 
-        $project->update([
-                'notes' => request('notes')
-        ]);
+
+        $project->update($attributes);
 
         return redirect($project->path());
 

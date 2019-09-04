@@ -913,7 +913,7 @@ module.exports = {
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
     objectFit: false,
-    objectPosition: false,
+    objectPosition:  ['responsive', 'hover', 'focus', 'active', 'group-hover'],
     opacity: ['responsive'],
     outline: ['focus'],
     overflow: ['responsive'],

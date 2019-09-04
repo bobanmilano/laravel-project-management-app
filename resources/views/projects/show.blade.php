@@ -6,7 +6,7 @@
         <p class="text-grey text-sm font-normal">
         	<a href="/projects" class="no-underline text-grey text-sm font-normal">My Projects</a> / {{ $project->title }} </p>
 
-        <a href="/projects/create"><button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Create a new project</button></a>
+        <a href="{{ $project->path() . '/edit'}}"><button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Edit project</button></a>
     </div>
 </header>
 
@@ -44,8 +44,8 @@
 			<div class="mb-6">
           <h2 class="text-grey text-lg font-normal mb-2">General Notes</h2>
             <form method="POST" action="{{ $project->path() }}">
-              @csrf
               @method('PATCH')
+              @csrf
               <textarea 
                   class="card w-full mb-4" 
                   style="min-height:200px;" 

@@ -4715,6 +4715,231 @@ table {
   margin-left: -1px;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.object-left {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.object-left-bottom {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.object-right {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.object-right-bottom {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.object-right-top {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.hover\:object-bottom:hover {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.hover\:object-center:hover {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.hover\:object-left:hover {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.hover\:object-left-bottom:hover {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.hover\:object-left-top:hover {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.hover\:object-right:hover {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.hover\:object-right-bottom:hover {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.hover\:object-right-top:hover {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.hover\:object-top:hover {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.focus\:object-bottom:focus {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.focus\:object-center:focus {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.focus\:object-left:focus {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.focus\:object-left-bottom:focus {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.focus\:object-left-top:focus {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.focus\:object-right:focus {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.focus\:object-right-bottom:focus {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.focus\:object-right-top:focus {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.focus\:object-top:focus {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.active\:object-bottom:active {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.active\:object-center:active {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.active\:object-left:active {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.active\:object-left-bottom:active {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.active\:object-left-top:active {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.active\:object-right:active {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.active\:object-right-bottom:active {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.active\:object-right-top:active {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.active\:object-top:active {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.group:hover .group-hover\:object-bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.group:hover .group-hover\:object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.group:hover .group-hover\:object-left {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.group:hover .group-hover\:object-left-bottom {
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+.group:hover .group-hover\:object-left-top {
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.group:hover .group-hover\:object-right {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.group:hover .group-hover\:object-right-bottom {
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+.group:hover .group-hover\:object-right-top {
+  -o-object-position: right top;
+     object-position: right top;
+}
+
+.group:hover .group-hover\:object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -10920,6 +11145,231 @@ table {
     margin-left: -1px;
   }
 
+  .sm\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .sm\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .sm\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .sm\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .sm\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .sm\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .sm\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .sm\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .sm\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .sm\:hover\:object-bottom:hover {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .sm\:hover\:object-center:hover {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .sm\:hover\:object-left:hover {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .sm\:hover\:object-left-bottom:hover {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .sm\:hover\:object-left-top:hover {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .sm\:hover\:object-right:hover {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .sm\:hover\:object-right-bottom:hover {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .sm\:hover\:object-right-top:hover {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .sm\:hover\:object-top:hover {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .sm\:focus\:object-bottom:focus {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .sm\:focus\:object-center:focus {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .sm\:focus\:object-left:focus {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .sm\:focus\:object-left-bottom:focus {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .sm\:focus\:object-left-top:focus {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .sm\:focus\:object-right:focus {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .sm\:focus\:object-right-bottom:focus {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .sm\:focus\:object-right-top:focus {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .sm\:focus\:object-top:focus {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .sm\:active\:object-bottom:active {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .sm\:active\:object-center:active {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .sm\:active\:object-left:active {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .sm\:active\:object-left-bottom:active {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .sm\:active\:object-left-top:active {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .sm\:active\:object-right:active {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .sm\:active\:object-right-bottom:active {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .sm\:active\:object-right-top:active {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .sm\:active\:object-top:active {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .group:hover .sm\:group-hover\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .group:hover .sm\:group-hover\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .group:hover .sm\:group-hover\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .group:hover .sm\:group-hover\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .group:hover .sm\:group-hover\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .group:hover .sm\:group-hover\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .group:hover .sm\:group-hover\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .group:hover .sm\:group-hover\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .group:hover .sm\:group-hover\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
   .sm\:opacity-0 {
     opacity: 0;
   }
@@ -17084,6 +17534,231 @@ table {
 
   .md\:-ml-px {
     margin-left: -1px;
+  }
+
+  .md\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .md\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .md\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .md\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .md\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .md\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .md\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .md\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .md\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .md\:hover\:object-bottom:hover {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .md\:hover\:object-center:hover {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .md\:hover\:object-left:hover {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .md\:hover\:object-left-bottom:hover {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .md\:hover\:object-left-top:hover {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .md\:hover\:object-right:hover {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .md\:hover\:object-right-bottom:hover {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .md\:hover\:object-right-top:hover {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .md\:hover\:object-top:hover {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .md\:focus\:object-bottom:focus {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .md\:focus\:object-center:focus {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .md\:focus\:object-left:focus {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .md\:focus\:object-left-bottom:focus {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .md\:focus\:object-left-top:focus {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .md\:focus\:object-right:focus {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .md\:focus\:object-right-bottom:focus {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .md\:focus\:object-right-top:focus {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .md\:focus\:object-top:focus {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .md\:active\:object-bottom:active {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .md\:active\:object-center:active {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .md\:active\:object-left:active {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .md\:active\:object-left-bottom:active {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .md\:active\:object-left-top:active {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .md\:active\:object-right:active {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .md\:active\:object-right-bottom:active {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .md\:active\:object-right-top:active {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .md\:active\:object-top:active {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .group:hover .md\:group-hover\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .group:hover .md\:group-hover\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .group:hover .md\:group-hover\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .group:hover .md\:group-hover\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .group:hover .md\:group-hover\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .group:hover .md\:group-hover\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .group:hover .md\:group-hover\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .group:hover .md\:group-hover\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .group:hover .md\:group-hover\:object-top {
+    -o-object-position: top;
+       object-position: top;
   }
 
   .md\:opacity-0 {
@@ -23252,6 +23927,231 @@ table {
     margin-left: -1px;
   }
 
+  .lg\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .lg\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .lg\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .lg\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .lg\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .lg\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .lg\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .lg\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .lg\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .lg\:hover\:object-bottom:hover {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .lg\:hover\:object-center:hover {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .lg\:hover\:object-left:hover {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .lg\:hover\:object-left-bottom:hover {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .lg\:hover\:object-left-top:hover {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .lg\:hover\:object-right:hover {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .lg\:hover\:object-right-bottom:hover {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .lg\:hover\:object-right-top:hover {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .lg\:hover\:object-top:hover {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .lg\:focus\:object-bottom:focus {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .lg\:focus\:object-center:focus {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .lg\:focus\:object-left:focus {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .lg\:focus\:object-left-bottom:focus {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .lg\:focus\:object-left-top:focus {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .lg\:focus\:object-right:focus {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .lg\:focus\:object-right-bottom:focus {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .lg\:focus\:object-right-top:focus {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .lg\:focus\:object-top:focus {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .lg\:active\:object-bottom:active {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .lg\:active\:object-center:active {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .lg\:active\:object-left:active {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .lg\:active\:object-left-bottom:active {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .lg\:active\:object-left-top:active {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .lg\:active\:object-right:active {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .lg\:active\:object-right-bottom:active {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .lg\:active\:object-right-top:active {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .lg\:active\:object-top:active {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .group:hover .lg\:group-hover\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .group:hover .lg\:group-hover\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .group:hover .lg\:group-hover\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .group:hover .lg\:group-hover\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .group:hover .lg\:group-hover\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .group:hover .lg\:group-hover\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .group:hover .lg\:group-hover\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .group:hover .lg\:group-hover\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .group:hover .lg\:group-hover\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
   .lg\:opacity-0 {
     opacity: 0;
   }
@@ -29416,6 +30316,231 @@ table {
 
   .xl\:-ml-px {
     margin-left: -1px;
+  }
+
+  .xl\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .xl\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .xl\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .xl\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .xl\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .xl\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .xl\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .xl\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .xl\:object-top {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .xl\:hover\:object-bottom:hover {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .xl\:hover\:object-center:hover {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .xl\:hover\:object-left:hover {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .xl\:hover\:object-left-bottom:hover {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .xl\:hover\:object-left-top:hover {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .xl\:hover\:object-right:hover {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .xl\:hover\:object-right-bottom:hover {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .xl\:hover\:object-right-top:hover {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .xl\:hover\:object-top:hover {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .xl\:focus\:object-bottom:focus {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .xl\:focus\:object-center:focus {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .xl\:focus\:object-left:focus {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .xl\:focus\:object-left-bottom:focus {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .xl\:focus\:object-left-top:focus {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .xl\:focus\:object-right:focus {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .xl\:focus\:object-right-bottom:focus {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .xl\:focus\:object-right-top:focus {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .xl\:focus\:object-top:focus {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .xl\:active\:object-bottom:active {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .xl\:active\:object-center:active {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .xl\:active\:object-left:active {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .xl\:active\:object-left-bottom:active {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .xl\:active\:object-left-top:active {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .xl\:active\:object-right:active {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .xl\:active\:object-right-bottom:active {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .xl\:active\:object-right-top:active {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .xl\:active\:object-top:active {
+    -o-object-position: top;
+       object-position: top;
+  }
+
+  .group:hover .xl\:group-hover\:object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+
+  .group:hover .xl\:group-hover\:object-center {
+    -o-object-position: center;
+       object-position: center;
+  }
+
+  .group:hover .xl\:group-hover\:object-left {
+    -o-object-position: left;
+       object-position: left;
+  }
+
+  .group:hover .xl\:group-hover\:object-left-bottom {
+    -o-object-position: left bottom;
+       object-position: left bottom;
+  }
+
+  .group:hover .xl\:group-hover\:object-left-top {
+    -o-object-position: left top;
+       object-position: left top;
+  }
+
+  .group:hover .xl\:group-hover\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .group:hover .xl\:group-hover\:object-right-bottom {
+    -o-object-position: right bottom;
+       object-position: right bottom;
+  }
+
+  .group:hover .xl\:group-hover\:object-right-top {
+    -o-object-position: right top;
+       object-position: right top;
+  }
+
+  .group:hover .xl\:group-hover\:object-top {
+    -o-object-position: top;
+       object-position: top;
   }
 
   .xl\:opacity-0 {

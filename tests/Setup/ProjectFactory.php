@@ -13,6 +13,7 @@ class ProjectFactory
 	protected $user;
 
 
+
 	public function withTasks($count) 
 	{
 		$this->tasksCount = $count;
@@ -38,7 +39,6 @@ class ProjectFactory
 		factory(Task::class, $this->tasksCount)->create([
 			'project_id'	=> $project->id
 		]);
-
 
 		return $project;
 	}
