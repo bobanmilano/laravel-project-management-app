@@ -50,11 +50,19 @@
                   class="card w-full mb-4" 
                   style="min-height:200px;" 
                   name="notes"
-                  placeholder="General notes here.">
-                    {{ $project->notes }}
+                  placeholder="General notes here.">{{ $project->notes }}
               </textarea>
                 <button type="submit" class="button">Submit</button>
-          </form>
+            </form>
+
+            @if($errors->any())
+              <div class="mt-6">
+                  @foreach($errors->all() as $error)
+                    <li class="text-sm text-red">{{ $error }}</li>
+                  @endforeach              
+              </div>  
+            @endif
+
 			</div>
         </div>
 		<div class="lg:w-1/4 px-3">

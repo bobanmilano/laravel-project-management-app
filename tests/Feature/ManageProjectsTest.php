@@ -82,6 +82,20 @@ class ManageProjectsTest extends TestCase
 
 
     /** @test */
+    public function a_user_can_update_a_projects_notes() 
+    {
+        $project = app(ProjectFactory::class)
+                    ->create();
+
+        $this->actingAs($project->owner)
+            ->patch($project->path(), ['notes'     => 'changed']);  
+
+        $this->assertDatabaseHas('projects', ['notes' => 'changed']);
+    }
+
+
+
+    /** @test */
     public function an_authenticated_user_cannot_update_the_projects_of_others() 
     {
         $this->signIn();
