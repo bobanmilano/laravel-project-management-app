@@ -18,6 +18,12 @@ class CreateActivitiesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('project_id');
             $table->string('description');
+
+            //polymorphic relationship - identical to having "ID and TYPE" in 
+            //separate columns
+            $table->nullableMorphs('subject');
+            $table->text('changes')->nullable();
+
             $table->timestamps();
 
             $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');

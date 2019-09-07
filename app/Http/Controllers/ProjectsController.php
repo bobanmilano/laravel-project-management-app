@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
-use App\Http\Requests\UpdateProjectRequest;
+use App\Http\Requests\UpdateProjectRequest; 
 use App\Project;
 
 
@@ -40,8 +40,8 @@ class ProjectsController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'sometimes|required', 
-            'description' => 'sometimes|required|max:100',
-            'notes'     => 'nullable'
+            'description' => 'sometimes|required',
+            'notes' => 'nullable'
             ]);
 
         return $attributes;
@@ -50,12 +50,13 @@ class ProjectsController extends Controller
 
 
     public function store() 
-    {
-        $this->validateRequest();
-
+    {  
+        
+        $attributes = $this->validateRequest();
         $attributes['owner_id'] = auth()->id();
-        $project = auth()->user()->projects()->create($attributes);
-
+      
+        $project = Project::create($attributes);
+      
 		return redirect($project->path());
     }
 
@@ -70,6 +71,7 @@ class ProjectsController extends Controller
 
     public function update(UpdateProjectRequest $request, Project $project) 
     {
+
         $request->persist();
         //$project->update($request->validated());
 

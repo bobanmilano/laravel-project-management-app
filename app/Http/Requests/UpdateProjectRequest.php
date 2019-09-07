@@ -5,8 +5,11 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Gate;
 
+
 class UpdateProjectRequest extends FormRequest
 {
+
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -14,7 +17,7 @@ class UpdateProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return Gate::allows('update', $this->project();
+        return Gate::allows('update', $this->project());
     }
 
     /**

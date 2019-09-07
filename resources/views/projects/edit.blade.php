@@ -9,8 +9,7 @@
             @csrf
             @method('PATCH')
        
-            @include('projects._form', [
-            'buttonText' => 'Update Project'])
+            @include('projects._form', ['buttonText' => 'Update Project'])
           
           </form>
       
