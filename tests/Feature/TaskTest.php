@@ -25,11 +25,13 @@ class TaskTest extends TestCase
 
 
     /** @test */
-    function it_has_a_path() {
+    function it_has_a_path() 
+    {
         $task = factory(Task::class)->create();
+        //dd($task->path());
 
-        $this->assertEquals($this->path(), $task->path());
-
+        $this->assertNotNull($task->path());
+        $this->assertEquals('/projects/' . $task->project->id . '/tasks/' . $task->id, $task->path());
     }
 
 

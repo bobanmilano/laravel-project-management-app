@@ -22,9 +22,6 @@ class TriggerActivityTest extends TestCase
 
         $this->assertCount(1, $project->activity);
 
-
-
-
         tap($project->activity->last(), function($activity) 
         {
             $this->assertEquals('project_created', $activity->description);
@@ -49,7 +46,7 @@ class TriggerActivityTest extends TestCase
 
             $expected = [
                 'before'    => ['title' => $originalTitle],
-                'after'     => ['title' => 'Changed']
+                'after'     => ['title' => 'changed']
             ];
 
             $this->assertEquals($expected, $activity->changes);
@@ -70,13 +67,13 @@ class TriggerActivityTest extends TestCase
         $this->assertCount(2, $project->activity);
 
         tap($project->activity->last(), function($activity) {
-            $this->assertEquals('created_task', $activity->description);
+            $this->assertEquals('task_created', $activity->description);
             $this->assertInstanceOf(Task::class, $activity->subject);
             $this->assertEquals('Some new task', $activity->subject->body);
         });
 
 
-        $this->assertEquals('created_task', $project->activity->last()->description);
+        $this->assertEquals('task_created', $project->activity->last()->description);
 
     }
 
@@ -96,12 +93,12 @@ class TriggerActivityTest extends TestCase
 
 
         tap($project->activity->last(), function($activity) {
-            $this->assertEquals('completed_task', $activity->description);
+            $this->assertEquals('task_completed', $activity->description);
             $this->assertInstanceOf(Task::class, $activity->subject);
         });
 
 
-        $this->assertEquals('completed_task', $project->activity->last()->description);
+        $this->assertEquals('task_completed', $project->activity->last()->description);
 
     }
 
@@ -130,7 +127,7 @@ class TriggerActivityTest extends TestCase
 
         $this->assertCount(4, $project->fresh()->activity);
 
-        $this->assertEquals('incompleted_task', $project->fresh()->activity->last()->description);
+        $this->assertEquals('task_incompleted', $project->fresh()->activity->last()->description);
 
     }
 
@@ -144,7 +141,7 @@ class TriggerActivityTest extends TestCase
         $project->tasks[0]->delete();
 
         $this->assertCount(3, $project->fresh()->activity);
-        $this->assertEquals('deleted_task', $project->fresh()->activity->last()->description);
+        $this->assertEquals('task_deleted', $project->fresh()->activity->last()->description);
    
     }
 

@@ -1,19 +1,23 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
+
 
 class Task extends Model
 {
+
+
+    use RecordsActivity;
+
     
-    protected $guarded = [];
+    protected $guarded  = [];
 
-    protected $touches = ['project'];
+    protected $touches  = [ 'project' ];
 
-    protected $casts =  [
-        "completed" => "boolean"
-    ];
+    protected $casts    = [ "completed" => "boolean" ];
+
+    protected static $recordableEvents = ['created', 'deleted'];
 
 
     protected static function boot() 
@@ -26,7 +30,7 @@ class Task extends Model
     {
         $this->update(["completed" => true]);
 
-        $this->recordActivity("completed_task");       
+        $this->recordActivity("task_completed");       
     }
 
 
@@ -34,7 +38,7 @@ class Task extends Model
     {
         $this->update(["completed" => false]);
 
-        $this->recordActivity("incompleted_task");       
+        $this->recordActivity("task_incompleted");       
     }
 
 
@@ -46,27 +50,8 @@ class Task extends Model
 
     public function path() 
     {
-
     	return "/projects/" . $this->project->id . "/tasks/" . $this->id;
     }
 
-
-    public function activity() 
-    {
-        return $this->morphMany(Activity::class, 'subject')->latest();
-    }
-
-
-    public function recordActivity($description) 
-    {
-
-        $this->activity()->create(
-            [
-                'description' => $description,
-                'project_id'    => $this->project->id
-
-            ]);
-  
-    }
 
 }
