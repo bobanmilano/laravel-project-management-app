@@ -1,5 +1,5 @@
 
-          <div class="card mt-3">
+          <div class="card mt-6">
             <h3 class="text-grey-dark text-lg font-normal mb-2">Activity feed</h3>
             <ul class="text-sm list-reset">
                @foreach($project->activity as $activity)

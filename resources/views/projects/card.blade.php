@@ -1,11 +1,25 @@
 
-    <div class="pb-6">
-	    <div class="card" style="height:200px;">
-	        <h3 class="py-4 mb-6 font-normal text-xl">
+    <div class="mb-3">
+	    <div class="card flex flex-col" style="height:200px;">
+	        
+	        <h3 class="py-3 mb-4 font-normal text-xl">
 	        	{{ $project->title }}
 	        </h3>
-	        <div class="text-grey-dark">
-	        	{{ str_limit($project->description, 120) }}
+
+	        <div class="text-grey-dark mb-4 flex-1">
+	        	{{ str_limit($project->description), 120 }}
 	        </div>
+			
+			@can('manage', $project)
+		        <footer>
+		        	<form method="POST" action="{{ $project->path() }}" class="text-right mt-4">
+		        		@csrf
+		        		@method('DELETE')
+
+		        		<button type="submit" class="text-xs">Delete</button>
+		        	</form>
+		        </footer>
+	        @endcan
+	      
 	    </div>
     </div>

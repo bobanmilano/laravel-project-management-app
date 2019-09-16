@@ -32,30 +32,33 @@ class ManageProjectsTest extends TestCase
 
 
     /** @test */
+    public function user_can_see_all_projects_they_are_invited_to_on_their_dashboard()
+    {
+        //user is logged in
+        $user = $this->signIn();
+
+        //user has been invited to projects
+        $project = factory('App\Project')->create(); 
+        $project->invite($user);
+
+        //user sees the projects on the dasboard
+        $this->get('/projects')->assertSee($project->title); 
+               
+    }
+
+
+
+    /** @test */
     public function a_user_can_create_a_project()
     {
-
-        $this->withoutExceptionHandling();
 
         $this->signIn();
 
         $this->get('/projects/create')->assertStatus(200);
+        
+        $attributes = factory(Project::class)->raw();
 
-        $attributes = [
-            'title'         => 'Test Project',
-            'description'   => 'Description for Test Project',
-            'notes'         => 'notes for Test Project',
-        ];
-
-        $response = $this->post('/projects', $attributes);
-
-
-        $project = Project::where('title', 'Test Project')->first();
-     
-
-        $response->assertRedirect('/projects/'. $project->id);
-
-        $this->get($project->path())
+        $this->followingRedirects()->post('/projects', $attributes)
                 ->assertSee($attributes['title'])
                 ->assertSee($attributes['notes'])
                 ->assertSee($attributes['description']);
@@ -63,11 +66,45 @@ class ManageProjectsTest extends TestCase
     }
 
 
+    /** @test */
+    public function unauthorized_users_cannot_delete_projects()
+    {
+        $project = app(ProjectFactory::class)
+                    ->create();
+
+        $this->delete($project->path())
+                ->assertRedirect('/login');
+
+        $user = $this->signIn();
+
+        $this->delete($project->path())->assertStatus(403);
+
+        $project->invite($user);
+
+        $this->actingAs($user)->delete($project->path())->assertStatus(403);
+    }
+
+
+    /** @test */
+    public function a_user_can_delete_a_project()
+    {
+        $this->withoutExceptionHandling();
+        $project = app(ProjectFactory::class)
+                    ->create();
+
+        $this->actingAs($project->owner)
+            ->delete($project->path())
+            ->assertRedirect('/projects');
+
+
+        $this->assertDatabaseMissing('projects', $project->only('id'));
+    }
+
 
     /** @test */
     public function a_user_can_update_a_project() 
     {      
-   $this->withoutExceptionHandling();
+        //$this->withoutExceptionHandling();
         $project = app(ProjectFactory::class)
                     ->create();
 
@@ -81,7 +118,6 @@ class ManageProjectsTest extends TestCase
         $this->assertDatabaseHas('projects', ['notes' => 'changed']);
 
     }
-
 
 
     /** @test */

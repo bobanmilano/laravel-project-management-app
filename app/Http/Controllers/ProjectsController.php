@@ -1,10 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
 use App\Http\Requests\UpdateProjectRequest; 
 use App\Project;
+
 
 
 class ProjectsController extends Controller
@@ -13,11 +12,11 @@ class ProjectsController extends Controller
 
     public function index() 
     {
-		$projects = auth()->user()->projects; //Project::all();
+		$projects = auth()->user()->accessibleProjects(); 
+
 
 		return view('projects.index', compact('projects'));
     }
-
 
 
     public function show(Project $project) 
@@ -28,12 +27,20 @@ class ProjectsController extends Controller
     }
 
 
-
     public function edit(Project $project) 
     {
         return view('projects.edit', compact('project'));
     }
 
+
+    public function destroy(Project $project) 
+    {
+        $this->authorize('manage', $project);
+
+        $project->delete();
+
+        return redirect('/projects');
+    }
 
 
     protected function validateRequest() 
@@ -48,10 +55,8 @@ class ProjectsController extends Controller
     }
 
 
-
     public function store() 
-    {  
-        
+    {        
         $attributes = $this->validateRequest();
         $attributes['owner_id'] = auth()->id();
       
@@ -61,25 +66,18 @@ class ProjectsController extends Controller
     }
 
 
-
     public function create() 
     {
         return view('projects.create');
     }
 
 
-
     public function update(UpdateProjectRequest $request, Project $project) 
     {
-
         $request->persist();
-        //$project->update($request->validated());
-
+        
         return redirect($project->path());
     }
-
-
-
 
 
 }

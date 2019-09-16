@@ -2,6 +2,7 @@
 
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 
 class Project extends Model
@@ -40,6 +41,27 @@ class Project extends Model
     public function activity() 
     {
         return $this->hasMany(Activity::class)->latest();
+    }
+
+
+    public function invite(User $user) 
+    {
+        return $this->members()->attach($user);
+    }
+
+
+    /**
+
+        a project can have many users
+        a user can have many projects
+            => a separate db-table and belongs-to-many relationship 
+
+        arg 1: User type
+        arg 2: tablename 
+    
+    **/
+    public function members() {
+        return $this->belongsToMany(User::class, 'project_members');
     }
     
 

@@ -5,8 +5,17 @@
     <div class="flex items-end justify-between w-full">
         <p class="text-grey text-sm font-normal">
         	<a href="/projects" class="no-underline text-grey text-sm font-normal">My Projects</a> / {{ $project->title }} </p>
+      
+      <div class="flex items-center"> 
 
-        <a href="{{ $project->path() . '/edit'}}"><button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Edit project</button></a>
+        @foreach($project->members as $user)
+          <img src="/images/{{ $user->name }}.jpg" alt="{{ $user->name }}" class="w-10 h-10 rounded-full mr-2"/>
+        @endforeach
+                  <img src="/images/{{ $project->owner->name }}.jpg" alt="{{ $project->owner->name  }}" class="w-10 h-10 rounded-full mr-2"/>
+
+        <a href="{{ $project->path() . '/edit'}}"><button class="ml-6 bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Edit project</button></a>
+      </div>
+   
     </div>
 </header>
 
@@ -52,14 +61,8 @@
                           </textarea>
                             <button type="submit" class="button">Submit</button>
                         </form>
-
-                        @if($errors->any())
-                          <div class="mt-6">
-                              @foreach($errors->all() as $error)
-                                <li class="text-sm text-red">{{ $error }}</li>
-                              @endforeach              
-                          </div>  
-                        @endif
+                @include('errors')
+                       
 
             			</div>
             </div>
@@ -67,6 +70,10 @@
         		<div class="lg:w-1/4 px-3">
                 	@include('projects.card')
                   @include('projects.activity.card')
+
+                  @can('manage', $project)
+                      @include('projects.invite')
+                  @endcan
         		</div>
       </div>
 </main>

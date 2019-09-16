@@ -1,11 +1,12 @@
-
+<b>
 @if (count($activity->changes['after']) ==  1) 
 
-Project <b>{{ key($activity->changes['after']) }}</b> updated.
-
+Project {{ key($activity->changes['after']) }} updated by {{ $activity->user->name }}
+ 
 @else
 
-Project <b>{{ $project->title }}</b> updated.
+Project {{ $project->title }} updated by {{ $activity->user->name }}
 
 
 @endif
+</b>

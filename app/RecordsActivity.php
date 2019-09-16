@@ -39,11 +39,12 @@ trait RecordsActivity {
 
 	protected static function recordableEvents() 
 	{
-		if (isset(static::$recordableEvents)) {
+		if (isset(static::$recordableEvents)) 
+		{
 			return static::$recordableEvents;
 		} 
 	
-		return ['created', 'updated', 'deleted'];
+		return ['created', 'updated'];
 	}
 
 
@@ -59,10 +60,12 @@ trait RecordsActivity {
             [
             'description' => $description,
             'changes'   => $this->activityChanges($description),
+            'user_id'	=> ($this->project ?? $this)->owner->id,
             'project_id'    => class_basename($this) === 'Project' ? $this->id : $this->project_id
         ]);
   
     }
+
 
 
     protected function activityChanges($description) 
@@ -76,5 +79,6 @@ trait RecordsActivity {
         } 
 
     }
+
 
 }
