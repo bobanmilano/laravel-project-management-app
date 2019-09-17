@@ -1,11 +1,12 @@
 
     <div class="mb-3">
 	    <div class="card flex flex-col" style="height:200px;">
-	        
-	        <h3 class="py-3 mb-4 font-normal text-xl">
-	        	{{ $project->title }}
-	        </h3>
-
+	        <div class="-ml-5">
+	        	<div class="tts"></div>
+		        <h3 class="py-3 mb-4 ml-4 font-normal text-xl">
+		        	{{ $project->title }}
+		        </h3>
+			</div>
 	        <div class="text-grey-dark mb-4 flex-1">
 	        	{{ str_limit($project->description), 120 }}
 	        </div>
