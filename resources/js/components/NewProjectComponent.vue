@@ -45,7 +45,7 @@
                         </div>
 
                         <button type="button" class="inline-flex items-center" @click="addTask">
-                            <svg class="mr-2 fill-current text-teal-500 inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg><span class="text-xs">Add new Task field</span>
+                            <svg class="mr-2 fill-current text-teal-500 inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg><span class="text-xs">Add new Task</span>
                         </button>
 
                     </div>
@@ -87,19 +87,31 @@
             {
                 this.form.tasks.push({ body: '' });
             },
+            /*
+                post() 
+                {
+                    axios.post('/projects', this.form)
+                    .then(response => {
+                        alert(response.data);
+                        location = response.data.message;
+                    })
+                    .catch(error => {
+                         this.errors = error.response.data.errors;
+                    });
+                    
+                     
+                }
+            */
 
-            post() 
+            async post() 
             {
-                axios.post('/projects', this.form)
-                .then(response => {
-                    alert(response.data);
-                    location = response.data.message;
-                })
-                .catch(error => {
-                     this.errors = error.response.data.errors;
-                });
-                
-                 
+                try 
+                {
+                    location = (await axios.post('/projects', this.form)).data.message;
+                } catch (error) 
+                {
+                    this.errors = error.response.data.errors;
+                }
             }
 
         }

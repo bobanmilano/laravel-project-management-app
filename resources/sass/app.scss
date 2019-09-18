@@ -7,7 +7,6 @@
 @import 'variables';
 
 
-
 @tailwind preflight;
 
 @tailwind components;
@@ -18,8 +17,17 @@
 
 
 .button {
-	@apply .bg-blue .text-white .no-underline .rounded-lg .text-sm .py-2 .px-5;
+	@apply .text-white .no-underline .rounded-lg .text-sm .py-2 .px-5;
 	box-shadow: 0 2px 7px 0 #b0eaff;
+
+	background-color: #4dc0b5;
+}
+
+.button-default {
+	@apply .text-white .no-underline .rounded-lg .text-sm .border .py-2 .px-5;
+	box-shadow: 0 2px 7px 0 #b0eaff;
+
+	background-color: gray;
 }
 
 .card {
@@ -28,7 +36,8 @@
 }
 
 .logo {
-	max-height: 24px;
+	width:150px;
+	height: 34px;
 }
 
 .tts {
@@ -40,4 +49,9 @@
 
 .border-error-color {
 	border-color:red;
+}
+
+.subtitle {
+	font-size: 38px;
+	color: gray;
 }

@@ -6986,7 +6986,6 @@ table {
 }
 
 .button {
-  background-color: #3490dc;
   color: #fff;
   text-decoration: none;
   border-radius: .5rem;
@@ -6996,6 +6995,7 @@ table {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-shadow: 0 2px 7px 0 #b0eaff;
+  background-color: #4dc0b5;
 }
 
 .card {
@@ -7006,7 +7006,8 @@ table {
 }
 
 .logo {
-  max-height: 24px;
+  width: 150px;
+  height: 34px;
 }
 
 .tts {
@@ -7018,6 +7019,11 @@ table {
 
 .border-error-color {
   border-color: red;
+}
+
+.subtitle {
+  font-size: 38px;
+  color: gray;
 }
 
 @media (min-width: 576px) {

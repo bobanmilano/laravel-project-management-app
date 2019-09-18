@@ -6,7 +6,7 @@
     <div class="flex items-end justify-between w-full">
         <h2 class="text-grey text-sm font-normal">Projects</h2>
 
-        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" @click.prevent="$modal.show('new-project')">Create a new project</button>
+        <button class="button text-white font-bold py-2 px-4 rounded" @click.prevent="$modal.show('new-project')">Create a new project</button>
     </div>
 </header>
 

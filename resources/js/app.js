@@ -26,6 +26,8 @@ Vue.use(VModal);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('new-project-modal', require('./components/NewProjectComponent.vue').default);
+Vue.component('headerdropdown', require('./components/HeaderDropdown.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

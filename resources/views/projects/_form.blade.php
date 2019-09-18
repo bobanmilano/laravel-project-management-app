@@ -13,7 +13,7 @@
             </div>
                   
             <div class="flex items-center justify-between">
-              <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              <button class="button text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                 {{ $buttonText }}
               </button>
             

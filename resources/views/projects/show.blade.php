@@ -8,14 +8,43 @@
       
       <div class="flex items-center"> 
 
-        @foreach($project->members as $user)
-          <img src="/images/{{ $user->name }}.jpg" alt="{{ $user->name }}" class="w-10 h-10 rounded-full mr-2"/>
-        @endforeach
-                  <img src="/images/{{ $project->owner->name }}.jpg" alt="{{ $project->owner->name  }}" class="w-10 h-10 rounded-full mr-2"/>
+            @foreach($project->members as $user)
+              <img src="/images/{{ $user->name }}.jpg" alt="{{ $user->name }}" class="w-10 h-10 rounded-full mr-2"/>
+            @endforeach
+              <img src="/images/{{ $project->owner->name }}.jpg" alt="{{ $project->owner->name  }}" class="w-10 h-10 rounded-full mr-2"/>
 
-        <a href="{{ $project->path() . '/edit'}}"><button class="ml-6 bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">Edit project</button></a>
+              <modal name="invite-user"  classes="py-10 card rounded-lg" height="auto">
+
+                    <div class="flex flex-col mt-6">
+                                
+                          <div class="-ml-5">
+                              <div class="tts"></div>
+                              <h3 class="py-3 mb-4 ml-4 font-normal text-xl">
+                                Invite a User
+                              </h3>
+                          </div>
+                                    
+                          <form method="POST" action="{{ $project->path() . '/invitations'}}" class="text-right mt-4">
+                            @csrf
+                              <div class="mb-3">
+                                  <input type='email' name="email" class="py-2 px-3 border w-full border-grey rounded" placeholder="Email address">
+                              </div>
+
+                              <div class="flex justify-between">
+                                <button type="submit" class="text-xs button">Invite</button>
+                                <button class="text-xs button-default">Cancel</button>
+                              </div>
+                          </form>
+
+                          @include('errors', ['bag' => 'invitations'])
+                                       
+                    </div>
+
+              </modal>
+            <button class="button text-white font-bold py-2 px-4 ml-6 rounded" @click.prevent="$modal.show('invite-user')">Invite a User</button>
+      
       </div>
-   
+
     </div>
 </header>
 

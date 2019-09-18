@@ -14,7 +14,7 @@
           </form>
       
           <p class="text-center text-gray-500 text-xs mt-12">
-            &copy;2019 Acme Corp. All rights reserved.
+            &copy;2019 Freelancer Corp. All rights reserved.
           </p>
       
 

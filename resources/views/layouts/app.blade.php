@@ -26,48 +26,65 @@
             <div class="container mx-auto">
                <div class="flex justify-between items-center py-3">
                 <a class="navbar-brand" href="{{ url('/projects') }}">
-                    <img src="/images/logo.svg" class="logo" />
+                    <img src="/images/freelancer.svg" class="logo" />
                 </a>
 
-
                 <div>
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+           
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+             
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                         <span class="links">
+                                <a class="nav-link " style="color: #0ed3cf;" href="{{ route('login') }}">{{ __('Login') }}</a>
+                         
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
+                              
+                                    <a class="nav-link" style="color: #0ed3cf;" href="{{ route('register') }}">{{ __('Register') }}</a>
+                             
                             @endif
+                        </span>
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                    
+                                
+                                <headerdropdown width="150px">
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    <template v-slot:trigger>
+                                         <button        
+                                            class="flex items-center text-default no-underline text-sm focus:outline-none">
+                                            
+                                            {{ Auth::user()->name }} 
+                                            
+                                            <img src="/images/{{ Auth::user()->name }}.jpg" 
+                                                    alt="{{ Auth::user()->name }}" 
+                                                    class="w-8 h-8 mr-2 rounded-full ml-4"/>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                                        </button>
+                                        
+                                    </template>
+                                    <template v-slot:default>
+                                      
+                                           <a href="/projects" class="block text-default px-4 no-underline hover:underline text-sm leading-loose">Projects</a> 
+
+                                            <a class="block text-default px-4 no-underline hover:underline text-sm leading-loose" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                             document.getElementById('logout-form').submit();">
+
+                                                  Logout
+
+                                       <!--            <svg class="mr-2 fill-current text-teal-500 inline-block h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 7H2v6h8v5l8-8-8-8v5z"/></svg> -->
+             
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </a>
+                                    </template>
+
+                                </headerdropdown>
+
+                          
                         @endguest
-                    </ul>
+                 
                     </div>
                 </div>
             </div>
